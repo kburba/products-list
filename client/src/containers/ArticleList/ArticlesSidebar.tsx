@@ -7,7 +7,7 @@ type Props = {
   isLoading: boolean;
 };
 
-export default function Sidebar({ categories, isLoading }: Props) {
+export default function ArticlesSidebar({ categories, isLoading }: Props) {
   return (
     <div className="sidebar">
       <h3>Kategorien</h3>
