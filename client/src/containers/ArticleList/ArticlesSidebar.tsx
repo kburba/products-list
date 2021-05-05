@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArticlesState } from '../../types/article.types';
 import Loader from '../../components/Loader';
+import { Link } from 'react-router-dom';
 
 type Props = {
   categories: ArticlesState['categories'];
@@ -14,13 +15,11 @@ export default function ArticlesSidebar({ categories, isLoading }: Props) {
       {isLoading && <Loader />}
       {categories.map((category, index) => (
         <ul key={`${index}-${category.name}`}>
-          {category.childrenCategories.map(({ name, urlPath }, idx) => {
-            return (
-              <li key={`${idx}-${name}`}>
-                <a href={`/${urlPath}`}>{name}</a>
-              </li>
-            );
-          })}
+          {category.childrenCategories.map(({ name, urlPath }, idx) => (
+            <li key={`${idx}-${name}`}>
+              <Link to={`/${urlPath}`}>{name}</Link>
+            </li>
+          ))}
         </ul>
       ))}
     </div>

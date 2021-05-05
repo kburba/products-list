@@ -7,4 +7,4 @@ export default function* rootSaga() {
   yield all([fork(watchArticlesSaga)]);
 }
 
-export type RootState = ReturnType<typeof rootSaga>;
+export type RootSaga = ReturnType<typeof rootSaga>;

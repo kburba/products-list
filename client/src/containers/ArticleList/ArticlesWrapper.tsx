@@ -2,9 +2,9 @@ import React, { Dispatch, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ArticleActions, ArticlesState } from '../../types/article.types';
 import { getArticles } from '../../store/actions/article.actions';
-import { RootState } from '../../store/reducers';
 import ArticleList from './ArticleList';
 import ArticlesSidebar from './ArticlesSidebar';
+import { RootState } from '../../store/configureStore';
 
 export default function ArticlesWrapper() {
   const dispatch = useDispatch<Dispatch<ArticleActions>>();

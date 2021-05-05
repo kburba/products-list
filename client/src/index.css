@@ -23,6 +23,7 @@ body {
 }
 
 .header {
+  padding: 15px;
   grid-area: header;
   background-color: lightblue;
   align-items: center;
@@ -59,4 +60,5 @@ body {
   grid-area: footer;
   background-color: lightblue;
   text-align: center;
+  padding: 15px;
 }
