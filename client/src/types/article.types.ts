@@ -1,3 +1,9 @@
+export type ArticlesState = {
+  categories: Category[];
+  isLoaded: boolean;
+  isLoading: boolean;
+};
+
 export type Category = {
   name: string;
   categoryArticles: ArticleCategory;
@@ -31,3 +37,26 @@ export type Image = {
 export type ArticleCategory = {
   articles: Article[];
 };
+
+export enum ARTICLE_ACTIONS {
+  GET_ARTICLES = 'GET_ARTICLES',
+  GET_ARTICLES_SUCCESS = 'GET_ARTICLES_SUCCESS',
+  GET_ARTICLES_ERROR = 'GET_ARTICLES_ERROR',
+}
+
+export interface GetArticles {
+  type: typeof ARTICLE_ACTIONS.GET_ARTICLES;
+}
+
+export interface GetArticlesSuccess {
+  type: typeof ARTICLE_ACTIONS.GET_ARTICLES_SUCCESS;
+  payload: Category[];
+}
+export interface GetArticlesError {
+  type: typeof ARTICLE_ACTIONS.GET_ARTICLES_ERROR;
+}
+
+export type ArticleActions =
+  | GetArticles
+  | GetArticlesSuccess
+  | GetArticlesError;
