@@ -1,7 +1,7 @@
 .articles {
   display: grid;
   grid-gap: 26px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .article {
@@ -16,8 +16,8 @@
   width: 100%;
 }
 
-.article > section[role="button"] {
-  padding: .2em;
+.article > section[role='button'] {
+  padding: 0.2em;
   background-color: lightgoldenrodyellow;
   border: 1px solid lightgray;
   cursor: pointer;
